@@ -1,4 +1,4 @@
-import ZoteroToolkit from "zotero-plugin-toolkit";
+import {ZoteroToolkit} from "zotero-plugin-toolkit";
 import hooks from "./hooks";
 import { citeItems } from "./modules/cite";
 

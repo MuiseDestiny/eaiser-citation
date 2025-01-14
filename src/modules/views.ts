@@ -70,7 +70,6 @@ class Views {
               }
               ztoolkit.log("_dragend", event)
               if (!this.getColumnInfo("citation")?.hidden) {
-
                 addon.api.citeItems();
               }
             },
@@ -111,8 +110,8 @@ class Views {
         "renderItem",
         config.addonRef,
         (original) => (index: number, selection: object, oldDiv: HTMLDivElement, columns: any[]) => {
-          const div = original.call(ZoteroPane.collectionsView, index, selection, oldDiv, columns);
-          const row = ZoteroPane.collectionsView.getRow(index) as any;
+          const div = original.call(ZoteroPane.collectionsView, index, selection, oldDiv, columns) as HTMLDivElement;
+          const row = ZoteroPane.collectionsView!.getRow(index) as any;
           if (
             Object.values(Zotero.ZoteroCitation.api.sessions)
               .map((s: any) => s.search?.key)

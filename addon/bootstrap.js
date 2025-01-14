@@ -22,7 +22,7 @@ async function waitForZotero() {
         await Zotero.initializationPromise;
     }
 
-    var { Services } = ChromeUtils.import("resource://gre/modules/Services.jsm");
+    // var { Services } = ChromeUtils.import("resource://gre/modules/Services.jsm");
     var windows = Services.wm.getEnumerator("navigator:browser");
     var found = false;
     while (windows.hasMoreElements()) {
